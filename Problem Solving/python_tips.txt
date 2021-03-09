@@ -1,0 +1,198 @@
+----------------------------------------------------------------
+1. List Comprehension / Generator Expression
+----------------------------------------------------------------
+
+
+
+result = []
+for item in item_list:
+    new_item = do_something_with(item)
+    result.append(new_item)
+
+
+    |
+    |
+    |
+    |
+    V
+
+result = [do_something_with(item) for item in item_list]
+
+"OR"
+
+result = (do_something_with(item) for item in item_list)
+
+
+
+----------------------------------------------------------------
+2. Functions
+----------------------------------------------------------------
+
+doubled_list = map(lambda x: x * 2, old_list)
+
+# If you want to reduce a sequence into a single value, use reduce
+
+from functools import reduce
+summation = reduce(lambda x, y: x + y, numbers)
+
+
+
+
+newlist = []
+for word in oldlist:
+    newlist.append(word.upper())
+    |
+    |
+    |
+    |
+    |
+    V
+newlist = map(str.upper, oldlist)
+"OR"
+newlist = [s.upper() for s in oldlist]
+"OR"
+iterator = (s.upper() for s in oldlist)
+"OR"
+upper = str.upper
+newlist = []
+append = newlist.append
+for word in oldlist:
+    append(upper(word))
+
+----------------------------------------------------------------
+3. Extract Functions or Generators
+----------------------------------------------------------------
+
+
+results = []
+for item in item_list:
+    # setups
+    # condition
+    # processing
+    # calculation
+    results.append(result)
+
+    |
+    |
+    |
+    |
+    |
+    V
+
+def process_item(item):
+    # setups
+    # condition
+    # processing
+    # calculation
+    return result
+results = [process_item(item) for item in item_list]
+
+_----------------------------------------------------------------------------
+
+results = []
+for i in range(10):
+    for j in range(i):
+        results.append((i, j))
+
+        |
+        |
+        |
+        |
+        |
+        V
+
+results = [(i, j)
+           for i in range(10)
+           for j in range(i)]
+
+
+
+------------------------------------------------------------------------------------
+# finding the max prior to the current item
+a = [3, 4, 6, 2, 1, 9, 0, 7, 5, 8]
+results = []
+current_max = 0
+for i in a:
+    current_max = max(i, current_max)
+    results.append(current_max)
+# results = [3, 4, 6, 6, 6, 9, 9, 9, 9, 9]
+
+
+    |
+    |
+    |
+    |
+    |
+    |
+    V
+
+def max_generator(numbers):
+    current_max = 0
+    for i in numbers:
+        current_max = max(i, current_max)
+        yield current_max
+a = [3, 4, 6, 2, 1, 9, 0, 7, 5, 8]
+results = list(max_generator(a))
+
+    |
+    |
+    |
+    |
+    |
+    |
+    V
+
+from itertools import accumulate
+a = [3, 4, 6, 2, 1, 9, 0, 7, 5, 8]
+results = list(accumulate(a, max))
+
+
+------------------------------------------------------------------------------------
+a = 5
+a//2 = 2
+a/2 = 2.5
+
+// gives only int result
+------------------------------------------------------------------------------------
+TRY{
+    DO THIS UNTIL WE GET AN EXCEPTION
+}CATCH(TYPE OF ERROR E){
+    DO THIS IF WE GET TYPE_OF_ERROR
+    IN THE TRY
+}FINALLY{
+    DO THIS NO MATTER WHAT
+}
+------------------------------------------------------------------------------------
+Reverse a list
+
+list.reverse()
+------------------------------------------------------------------------------------
+
+Ennumerate
+
+
+l1 = ["eat","sleep","repeat"]
+obj1 = enumerate(l1)
+print (list(enumerate(l1)))
+
+OUTPUT
+[(0, 'eat'), (1, 'sleep'), (2, 'repeat')]
+
+
+------------------------------------------------------------------------------------
+
+names = ["Rishikesh", "aman", "Ajay", "Hemkesh", "sandeep", "Darshan", "Virendra", "Shwetabh"]
+names2 = sorted(names)
+names2
+['Ajay', 'Darshan', 'Hemkesh', 'Rishikesh', 'Shwetabh', 'Virendra', 'aman', 'sandeep']
+# But I don't want this o/p(here our intention is to treat 'a' same as 'A')
+...
+names3 = sorted(names, key=lambda name:name.lower())
+names3
+['Ajay', 'aman', 'Darshan', 'Hemkesh', 'Rishikesh', 'sandeep', 'Shwetabh', 'Virendra']
+
+You can define your own function(callable) and provide it as value of key.
+
+
+
+

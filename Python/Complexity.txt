@@ -1,0 +1,24 @@
+Boys, so again we are around time complaxity and this time we will do it once for all.
+
+Time Complexity
+---------------------
+
+* So, the time complexity is the number of operations an algorithm performs to complete its task
+  (considering that each operation takes the same amount of time).
+
+* The algorithm that performs the task in the smallest number
+  of operations is considered the most efficient one in terms of the time complexity. 
+
+* When we analyse an algorithm, 
+  we use a notation to represent its time complexity and that notation is Big O notation.
+
+* The Time complexity or Big O notations for some popular algorithms are listed below:
+
+    1. Binary Search: O(log n)
+    2. Linear Search: O(n)
+    3. Quick Sort: O(n * log n)
+    4. Selection Sort: O(n * n)
+    5. Travelling salesperson : O(n!)
+
+
+
