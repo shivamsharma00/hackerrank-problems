@@ -1,18 +1,23 @@
-thousand = "(?:(M){0, 3})?"
-hundred = "(?:(D?(C){0, 3})|(CM)|(CD))?"
-ten = "(?:((L?(X){0, 3})|(XL)|(XC)))?"
-unit = "(?:(V?(I){0, 3})|(IX)|(IV))?"
+s = 'BANANA'
+# print(s.count('N'))
 
-regex_pattern = r"^" + thousand + hundred + ten + unit + "$"
+# s = input()
 
-reg_1 = '^M{0, 4}(CM|CD|D?C{0, 3})(XC|XL|L?X{0, 3})(IX|IV|V?I{0, 3})$'
-import re
+vowels = 'AEIOU'
 
-print(str(bool(re.match(reg_1, input()))))
+kevsc = 0
+stusc = 0
 
+for i in range(len(s)):
+    if s[i] in vowels:
+        kevsc += (len(s)-i)
+    else:
+        stusc += (len(s)-i)
+    print(kevsc, stusc)
 
-
-import roman
-x = input()
-try:
-    if (roman)
+if kevsc > stusc:
+    print("Kevin", kevsc)
+elif kevsc < stusc:
+    print ("Stuart", stusc)
+else:
+    print ("Draw")

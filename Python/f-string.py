@@ -1,7 +1,8 @@
 value = 5
 print(f'{value} multiplied by 2 is : {value*2}.')
 
-fcc = 'freeCodeCamp'
+fcc = 'freeCodeCamp one'
+# fcc = '1 w 2 r 3g'
 print(fcc.capitalize())
 print(fcc.count('C'))
 print(fcc.find('e'))
