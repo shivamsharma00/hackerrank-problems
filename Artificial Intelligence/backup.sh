@@ -1,0 +1,23 @@
+#!/bin/bash
+
+
+
+# creating a new user
+sudo adduser username    
+
+
+# shell script to backup folders
+current_time = `date +%b-%d-%y`     # Get the cuurent time to use as folder 
+
+dest = /home/usr/shivam/backup-$current_time.tar.gz     # creating a backup file 
+
+src = /home/usr/shivam/data_folder      # folder which is going to be backed up
+
+tar -cpzf $dest $src        # creating the backup, c-create, p-preserve permission of files, z-compress the files
+
+
+# show the size of the folder
+du -sh
+
+
+
