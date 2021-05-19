@@ -11,8 +11,8 @@ count_n = 0
 # while count_p<number:
 numbers = [f.readline().split(" ") for _ in range(number)]
 
-    dict[a] = b
-    count_p += 1
+dict[a] = b
+count_p += 1
 number_1 = 5
 # while count_n<number_1:
 #     new = f.readline()[0:-1]

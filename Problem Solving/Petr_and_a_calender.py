@@ -1,5 +1,6 @@
 # Written By : Shivam Sharma
-# This code takes two inputs (month number and weekday number) and prints how many weeks will be
+# This code takes two inputs (month number and weekday number) 
+# and prints how many weeks will be
 # there in that month or the week columns.
 def main():
     month = {"1":"31", "2":"30", "3":"31", "4":"30", "5":"31","6":"30", 
