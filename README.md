@@ -1,4 +1,4 @@
-# HackerRank Python Problems Repository
+# HackerRank Python Problems
 
 Welcome to the HackerRank Python Problems Repository! This repository contains solutions to various Python programming challenges from HackerRank. Whether you're practicing for coding interviews, honing your algorithmic skills, or simply looking for interesting programming problems to solve, this repository offers a collection of solutions to help you improve your Python proficiency.
 
